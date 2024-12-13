@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliações</title>
+    <link rel="stylesheet" href="css/avaliacoes.css">
+    <link rel="stylesheet" href="css/homeBar.css">
+</head>
+<body>
+    <header class="homeBar">
+        <div class="bandeiraEsquerda">
+            <img src="img/_202408191527 _ bandeira5.png" alt="Bandeira do Reino Unido">
+        </div>
+        <div class="menuCentral">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cardapio.html">Cardápio do Dia</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="reservas.html">Reservas</a></li>
+                    <li><a href="avaliacoes.html">Avaliações e Comentários</a></li>
+                    <li><a href="contato.html">Localização e Contato</a></li>
+                    <li><a href="galeria.html">Galeria de Fotos</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bandeiraDireita">
+            <img src="img/_202408191527 _ bandeira5.png" alt="Bandeira do Reino Unido">
+        </div>
+    </header>
+
+    <h2>Deixe sua Avaliação</h2>
+    <form id="avaliacao-form">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="estrelas">Avaliação:</label><br>
+        <div id="estrelas">
+            <input type="radio" id="estrela5" name="estrelas" value="5">
+            <label for="estrela5">5 estrelas</label><br>
+            <input type="radio" id="estrela4" name="estrelas" value="4">
+            <label for="estrela4">4 estrelas</label><br>
+            <input type="radio" id="estrela3" name="estrelas" value="3">
+            <label for="estrela3">3 estrelas</label><br>
+            <input type="radio" id="estrela2" name="estrelas" value="2">
+            <label for="estrela2">2 estrelas</label><br>
+            <input type="radio" id="estrela1" name="estrelas" value="1">
+            <label for="estrela1">1 estrela</label><br>
+        </div><br>
+
+        <label for="comentario">Comentário (até 200 caracteres):</label><br>
+        <textarea id="comentario" name="comentario" maxlength="200"></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <h2>Avaliações</h2>
+
+    <div class="avaliacoes-container">
+        <div class="avaliacao">
+            <p><strong>Nome:</strong> Cliente 1</p>
+            <p><strong>Data:</strong> 20 de agosto de 2024</p>
+            <p class="estrelas"><strong>Avaliação:</strong> ★★★★☆</p>
+            <p class="comentario"><strong>Comentário:</strong> Ótimo serviço!</p>
+        </div>
+
+        <div class="avaliacao">
+            <p><strong>Nome:</strong> Cliente 2</p>
+            <p><strong>Data:</strong> 19 de agosto de 2024</p>
+            <p class="estrelas"><strong>Avaliação:</strong> ★★★☆☆</p>
+            <p class="comentario"><strong>Comentário:</strong> Bom, mas poderia ser melhor.</p>
+        </div>
+
+        <div class="avaliacao">
+            <p><strong>Nome:</strong> Cliente 3</p>
+            <p><strong>Data:</strong> 18 de agosto de 2024</p>
+            <p class="estrelas"><strong>Avaliação:</strong> ★★★★☆</p>
+            <p class="comentario"><strong>Comentário:</strong> Muito satisfeito com o atendimento.</p>
+        </div>
+
+        <div class="avaliacao">
+            <p><strong>Nome:</strong> Cliente 4</p>
+            <p><strong>Data:</strong> 17 de agosto de 2024</p>
+            <p class="estrelas"><strong>Avaliação:</strong> ★★☆☆☆</p>
+            <p class="comentario"><strong>Comentário:</strong> Não gostei muito da comida.</p>
+        </div>
+
+        <div class="avaliacao">
+            <p><strong>Nome:</strong> Cliente 5</p>
+            <p><strong>Data:</strong> 16 de agosto de 2024</p>
+            <p class="estrelas"><strong>Avaliação:</strong> ★★★★★</p>
+            <p class="comentario"><strong>Comentário:</strong> Excelente! Voltarei com certeza.</p>
+        </div>
+
+        <div class="avaliacao">
+            <p><strong>Nome:</strong> Cliente 6</p>
+            <p><strong>Data:</strong> 15 de agosto de 2024</p>
+            <p class="estrelas"><strong>Avaliação:</strong> ★★★☆☆</p>
+            <p class="comentario"><strong>Comentário:</strong> Atendimento razoável, mas ambiente agradável.</p>
+        </div>
+    </div>
+
+    <button id="ver-mais">Ver Mais</button>
+    <footer>
+        <p>&copy; 2024 Liverpool Restaurante. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script/avaliacoes.js"></script>
+</body>
+</html>

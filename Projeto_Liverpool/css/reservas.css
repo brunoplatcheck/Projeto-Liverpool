@@ -1,0 +1,146 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('../fontes/ABeeZee-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MinhaFonte', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #221d1b;
+    color: #d8d8dc;
+}
+
+header.homeBar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #de1310;
+    top: 0;
+    left: 0;
+    height: 60px; /* Ajustado para melhor visualização */
+    padding: 0 20px; /* Adicionado padding para espaçamento */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+header.homeBar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espaço entre itens do menu */
+}
+
+header.homeBar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header.homeBar nav ul li a:hover {
+    color: #ffcc00;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin-top: 60px; /* Espaço para o header fixo */
+    padding: 20px;
+}
+
+.reserva-panel {
+    background-color: #2a2523;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.reserva-content h2 {
+    color: #de1310;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.reserva-content label {
+    display: block;
+    font-size: 1.2em;
+    color: #d8d8dc;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.reserva-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3b3533;
+    color: #d8d8dc;
+    font-size: 1em;
+}
+
+.reserva-content input::placeholder {
+    color: #d8d8dc;
+    opacity: 0.8;
+}
+
+.reserva-content button {
+    background-color: #de1310;
+    color: #d8d8dc;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2em;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.reserva-content button:hover {
+    background-color: #bf0f0e;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header.homeBar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    header.homeBar nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header.homeBar nav ul li a {
+        font-size: 14px;
+    }
+
+    .reserva-content input,
+    .reserva-content button {
+        font-size: 1em;
+        padding: 8px;
+    }
+}

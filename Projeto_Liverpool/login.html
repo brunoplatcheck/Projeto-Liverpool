@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/homeBar.css">
+    <script src="js/logar.js"></script>
+</head>
+<body>
+    <header class="homeBar">
+        <div class="bandeiraEsquerda">
+            <img src="img/_202408191527 _ bandeira5.png" alt="Bandeira do Reino Unido">
+        </div>
+        <div class="menuCentral">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cardapio.html">Cardápio do Dia</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="reservas.html">Reservas</a></li>
+                    <li><a href="avaliacoes.html">Avaliações e Comentários</a></li>
+                    <li><a href="contato.html">Localização e Contato</a></li>
+                    <li><a href="galeria.html">Galeria de Fotos</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bandeiraDireita">
+            <img src="img/_202408191527 _ bandeira5.png" alt="Bandeira do Reino Unido">
+        </div>
+    </header>
+
+    <main>
+        <section class="login-panel">
+            <div class="login-content">
+                <img src="img/login-fotor-bg-remover-20240821195430.png" alt="Login Image">
+                <form id="loginForm" action="#" method="post">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+        
+                    <a href="#">Esqueceu a senha?</a>
+        
+                    <label for="role">Selecione sua função:</label>
+                    <select id="role" name="role">
+                        <option value="gerente">Gerente</option>
+                        <option value="supervisor">Supervisor</option>
+                        <option value="colaborador">Colaborador</option>
+                    </select>
+        
+                    <button type="submit">Entrar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Liverpool Restaurante. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

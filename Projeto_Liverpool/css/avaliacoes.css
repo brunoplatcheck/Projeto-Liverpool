@@ -1,0 +1,143 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('../fontes/ABeeZee-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal; 
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MinhaFonte', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #221d1b;
+    color: #d8d8dc;
+}
+
+header.homeBar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #de1310;
+    top: 0;
+    left: 0;
+    height: 40px;
+    padding: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.avaliacoes-container {
+    margin-top: 60px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+#avaliacao-form {
+    background-color: #2a2523;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#avaliacao-form label {
+    color: #d8d8dc;
+    font-weight: 500;
+}
+
+#avaliacao-form input[type="text"],
+#avaliacao-form input[type="email"],
+#avaliacao-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #a09e9c;
+    border-radius: 5px;
+    background-color: #221d1b;
+    color: #d8d8dc;
+}
+
+#avaliacao-form input[type="radio"] {
+    margin-right: 10px;
+}
+
+#avaliacao-form #estrelas label {
+    font-size: 1em;
+    color: #d8d8dc;
+    margin-right: 10px;
+}
+
+#avaliacao-form button[type="submit"] {
+    background-color: #de1310;
+    color: #d8d8dc;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#avaliacao-form button[type="submit"]:hover {
+    background-color: #b80f0d;
+}
+
+.avaliacao {
+    background-color: #2a2523;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33% - 20px);
+    min-width: 250px;
+}
+
+.avaliacao .estrelas {
+    font-size: 1.5em;
+    color: #de1310;
+}
+
+.avaliacao .comentario {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #d8d8dc;
+}
+
+.avaliacao .info-cliente {
+    margin-top: 5px;
+    font-size: 1em;
+    color: #a09e9c;
+    text-align: right;
+}
+
+#ver-mais {
+    background-color: #de1310;
+    color: #d8d8dc;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+    margin: 20px auto 0 auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#ver-mais:hover {
+    background-color: #b80f0d;
+}

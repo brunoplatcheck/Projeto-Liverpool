@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Gerente</title>
+    <link rel="stylesheet" href="css/painel.css">
+    <link rel="stylesheet" href="css/homeBar.css">
+</head>
+<body>
+    <header class="homeBar">
+        <div class="bandeiraEsquerda">
+            <img src="img/_202408191527 _ bandeira5.png" alt="Bandeira do Reino Unido">
+        </div>
+        <div class="menuCentral">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cardapio.html">Cardápio do Dia</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="reservas.html">Reservas</a></li>
+                    <li><a href="avaliacoes.html">Avaliações e Comentários</a></li>
+                    <li><a href="contato.html">Localização e Contato</a></li>
+                    <li><a href="galeria.html">Galeria de Fotos</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bandeiraDireita">
+            <img src="img/_202408191527 _ bandeira5.png" alt="Bandeira do Reino Unido">
+        </div>
+    </header>
+
+    <main>
+        <section class="painel">
+            <h1>Painel do Gerente</h1>
+            <p>Bem-vindo(a) ao painel de gerenciamento. Aqui você pode supervisionar as atividades do restaurante.</p>
+            <section class="update-menu-panel">
+                <div class="update-menu-content">
+                    <section class="menu-display-panel">
+                        <h2>Visualizar Cardápio</h2>
+                        <div id="menu-list" class="menu-list">
+                            <!-- Itens do cardápio serão inseridos aqui pelo JavaScript -->
+                        </div>
+                    </section>
+                    <section class="edit-panel">
+                        <h2>Atualizar Item do Cardápio</h2>
+                        <form id="updateForm">
+                            <input type="hidden" id="itemId">
+                            <label for="itemNome">Nome:</label>
+                            <input type="text" id="itemNome" required>
+                    
+                            <label for="itemDescricao">Descrição:</label>
+                            <textarea id="itemDescricao" required></textarea>
+                    
+                            <label for="itemPreco">Preço:</label>
+                            <input type="number" id="itemPreco" step="0.01" required>
+                    
+                            <button type="button" id="atualizarButton">Atualizar</button>
+                        </form>
+                    </section>
+    
+                    <div id="menu-items">
+                        <!-- Lista de itens do cardápio será carregada aqui -->
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>Adicionar Novo Evento</h2>
+                <form id="formAdicionarEvento">
+                    <label for="titulo">Título do Evento:</label>
+                    <input type="text" id="titulo" name="titulo" required>
+            
+                    <label for="dataEvento">Data:</label>
+                    <input type="date" id="dataEvento" name="dataEvento" required>
+            
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" name="descricao" rows="4" required></textarea>
+            
+                    <button type="submit">Adicionar Evento</button>
+                </form>
+            </section>
+            <section>
+                <h2>Gerenciamento de Reservas</h2>
+                
+                <!-- Lista de Reservas -->
+                <div id="listaReservas">
+                    <h3>Reservas Pendentes</h3>
+                    <ul id="reservas-list">
+                        <!-- Itens da lista de reservas serão adicionados dinamicamente aqui -->
+                    </ul>
+                </div>
+            
+                <!-- Detalhes da Reserva Selecionada -->
+                <div id="detalhesReserva">
+                    <h3>Detalhes da Reserva</h3>
+                    <p id="nomeCliente">Nome: </p>
+                    <p id="cpfCliente">CPF: </p>
+                    <p id="emailCliente">Email: </p>
+                    <textarea id="mensagem" rows="4" placeholder="Digite a mensagem a ser enviada..."></textarea>
+                    <button id="enviarEmail">Enviar Email</button>
+                </div>
+            </section>
+            <h2>Fiscalização dos Supervisores</h2>
+            <ul>
+                <li>Supervisor A - Revisão de cardápios realizada em 20/08/2024</li>
+                <li>Supervisor B - Alteração nas reservas em 18/08/2024</li>
+                <!-- Adicione mais supervisores conforme necessário -->
+            </ul>
+
+            <h2>Responder Seção de Contatos</h2>
+            <form action="#" method="post">
+                <label for="contact-select">Selecione um contato para responder:</label>
+                <select id="contact-select" name="contact-select">
+                    <option value="contact1">Sugestão de João em 20/08/2024</option>
+                    <option value="contact2">Dúvida de Maria em 19/08/2024</option>
+                    <!-- Adicione mais contatos conforme necessário -->
+                </select>
+
+                <label for="response">Resposta:</label>
+                <textarea id="response" name="response" placeholder="Digite sua resposta aqui..." required></textarea>
+
+                <button type="submit">Enviar Resposta</button>
+            </form>
+
+            <h2>Visualizar Calendário Completo de Eventos</h2>
+            <p>Para visualizar o calendário completo de eventos, <a href="calendario.html">clique aqui</a>.</p>
+        </section>
+        <section class="admin-panel">
+            <h2>Administração da Galeria</h2>
+        
+            <!-- Formulário de Upload de Foto -->
+            <form id="uploadForm" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Adicionar Nova Foto</legend>
+                    <label for="photo">Escolha uma foto:</label>
+                    <input type="file" id="photo" name="photo" accept="image/*" required>
+        
+                    <label for="caption">Legenda:</label>
+                    <input type="text" id="caption" name="caption" required>
+        
+                    <button type="submit">Adicionar Foto</button>
+                </fieldset>
+            </form>
+        
+            <!-- Formulário de Atualização de Foto -->
+            <form id="updateForm" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Atualizar Foto Existente</legend>
+                    <label for="photoId">ID da Foto:</label>
+                    <input type="text" id="photoId" name="photoId" required>
+        
+                    <label for="newPhoto">Escolha uma nova foto:</label>
+                    <input type="file" id="newPhoto" name="newPhoto" accept="image/*">
+        
+                    <label for="newCaption">Nova Legenda:</label>
+                    <input type="text" id="newCaption" name="newCaption">
+        
+                    <button type="submit">Atualizar Foto</button>
+                </fieldset>
+            </form>
+        
+            <!-- Formulário de Exclusão de Foto -->
+            <form id="deleteForm">
+                <fieldset>
+                    <legend>Excluir Foto</legend>
+                    <label for="deletePhotoId">ID da Foto:</label>
+                    <input type="text" id="deletePhotoId" name="deletePhotoId" required>
+        
+                    <button type="submit">Excluir Foto</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Liverpool Restaurante. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script/atualizarMenu.js"></script>
+    <script src="script/eventos.js"></script>
+    <script src="script/galeria.js"></script>
+</body>
+</html>

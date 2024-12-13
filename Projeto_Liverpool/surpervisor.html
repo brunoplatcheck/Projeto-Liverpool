@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Supervisor</title>
+    <link rel="stylesheet" href="css/painel.css">
+    <link rel="stylesheet" href="css/homeBar.css">
+</head>
+<body>
+    <header class="homeBar">
+        <div class="bandeiraEsquerda">
+            <img src="img/_202408191527 _ bandeira5.png" alt="Bandeira do Reino Unido">
+        </div>
+        <div class="menuCentral">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cardapio.html">Cardápio do Dia</a></li>
+                    <li><a href="painel_supervisor.html">Painel do Supervisor</a></li>
+                    <li><a href="logout.html">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bandeiraDireita">
+            <img src="img/_202408191527 _ bandeira5.png" alt="Bandeira do Reino Unido">
+        </div>
+    </header>
+
+    <main>
+        <section class="painel">
+            <h1>Bem-vindo, Supervisor</h1>
+            <p>Aqui você pode gerenciar o cardápio e visualizar alterações feitas por colaboradores.</p>
+            <section class="update-menu-panel">
+                <div class="update-menu-content">
+                    <section class="menu-display-panel">
+                        <h2>Visualizar Cardápio</h2>
+                        <div id="menu-list" class="menu-list">
+                            <!-- Itens do cardápio serão inseridos aqui pelo JavaScript -->
+                        </div>
+                    </section>
+                    <section class="edit-panel">
+                        <h2>Atualizar Item do Cardápio</h2>
+                        <form id="updateForm">
+                            <input type="hidden" id="itemId">
+                            <label for="itemNome">Nome:</label>
+                            <input type="text" id="itemNome" required>
+                    
+                            <label for="itemDescricao">Descrição:</label>
+                            <textarea id="itemDescricao" required></textarea>
+                    
+                            <label for="itemPreco">Preço:</label>
+                            <input type="number" id="itemPreco" step="0.01" required>
+                    
+                            <button type="button" id="atualizarButton">Atualizar</button>
+                        </form>
+                    </section>
+    
+                    <div id="menu-items">
+                        <!-- Lista de itens do cardápio será carregada aqui -->
+                    </div>
+                </div>
+            </section>
+            <form action="#" method="post">
+                <label for="dishName">Nome do Prato:</label>
+                <input type="text" id="dishName" name="dishName" required>
+
+                <label for="dishDescription">Descrição do Prato:</label>
+                <textarea id="dishDescription" name="dishDescription" required></textarea>
+
+                <label for="dishImage">Imagem do Prato:</label>
+                <input type="file" id="dishImage" name="dishImage" accept="image/*" required>
+
+                <button type="submit">Adicionar ao Cardápio</button>
+            </form>
+            <section>
+                <h2>Gerenciamento de Reservas</h2>
+                
+                <!-- Lista de Reservas -->
+                <div id="listaReservas">
+                    <h3>Reservas Pendentes</h3>
+                    <ul id="reservas-list">
+                        <!-- Itens da lista de reservas serão adicionados dinamicamente aqui -->
+                    </ul>
+                </div>
+            
+                <!-- Detalhes da Reserva Selecionada -->
+                <div id="detalhesReserva">
+                    <h3>Detalhes da Reserva</h3>
+                    <p id="nomeCliente">Nome: </p>
+                    <p id="cpfCliente">CPF: </p>
+                    <p id="emailCliente">Email: </p>
+                    <textarea id="mensagem" rows="4" placeholder="Digite a mensagem a ser enviada..."></textarea>
+                    <button id="enviarEmail">Enviar Email</button>
+                </div>
+            </section>
+            <h2>Alterações Recentes</h2>
+            <ul>
+                <!-- Lista de alterações feitas por colaboradores -->
+                <li>Colaborador X adicionou o prato "Nome do Prato" em 20/08/2024.</li>
+                <!-- Adicionar mais alterações conforme necessário -->
+            </ul>
+        </section>
+        <section class="admin-panel">
+            <h2>Administração da Galeria</h2>
+        
+            <!-- Formulário de Upload de Foto -->
+            <form id="uploadForm" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Adicionar Nova Foto</legend>
+                    <label for="photo">Escolha uma foto:</label>
+                    <input type="file" id="photo" name="photo" accept="image/*" required>
+        
+                    <label for="caption">Legenda:</label>
+                    <input type="text" id="caption" name="caption" required>
+        
+                    <button type="submit">Adicionar Foto</button>
+                </fieldset>
+            </form>
+        
+            <!-- Formulário de Atualização de Foto -->
+            <form id="updateForm" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Atualizar Foto Existente</legend>
+                    <label for="photoId">ID da Foto:</label>
+                    <input type="text" id="photoId" name="photoId" required>
+        
+                    <label for="newPhoto">Escolha uma nova foto:</label>
+                    <input type="file" id="newPhoto" name="newPhoto" accept="image/*">
+        
+                    <label for="newCaption">Nova Legenda:</label>
+                    <input type="text" id="newCaption" name="newCaption">
+        
+                    <button type="submit">Atualizar Foto</button>
+                </fieldset>
+            </form>
+        
+            <!-- Formulário de Exclusão de Foto -->
+            <form id="deleteForm">
+                <fieldset>
+                    <legend>Excluir Foto</legend>
+                    <label for="deletePhotoId">ID da Foto:</label>
+                    <input type="text" id="deletePhotoId" name="deletePhotoId" required>
+        
+                    <button type="submit">Excluir Foto</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Liverpool Restaurante. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script/atualizarMenu.js"></script>
+    <script src="script/eventos.js"></script>
+    <script src="script/galeria.js"></script>
+</body>
+</html>
